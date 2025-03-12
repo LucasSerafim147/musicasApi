@@ -1,17 +1,45 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+    <meta name="description" content="Aplicativo de músicas com dados de API">
+    <meta name="theme-color" content="#2c3e50">
+    <link rel="manifest" href="/manifest.json">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Músicas API</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <div class="container">
-        <h1>Lista de Músicas</h1>
+        <h1>🎵 Lista de Músicas</h1>
+        <input type="text" id="searchInput" placeholder="Pesquisar música ou artista..." class="search-bar">
         <div id="musicList" class="music-container"></div>
-    </div>
+      </div>
 
     <script src="script.js"></script>
+
+
+    <footer class="footer">
+        <div class="container">
+          <div class="contact-links">
+            <a href="mailto:contato@musicas.com" class="contact-link">
+              <i class="fas fa-envelope"></i>
+              <span>E-mail</span>
+            </a>
+            
+            <a href="tel:+5511999999999" class="contact-link">
+              <i class="fas fa-phone-alt"></i>
+              <span>Telefone</span>
+            </a>
+            
+            <a href="sms:+5511999999999" class="contact-link">
+              <i class="fas fa-comment-sms"></i>
+              <span>SMS</span>
+            </a>
+          </div>
+          
+        </div>
+      </footer>
 </body>
 </html>
