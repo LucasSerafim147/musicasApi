@@ -18,11 +18,11 @@ body {
   padding: 20px;
   max-width: 800px;
   margin: 0 auto;
-  padding-bottom: 180px; /* Espaço para o footer fixo */
+  padding-bottom: 180px; 
   box-sizing: border-box;
 }
 
-/* Estilos da Barra de Pesquisa */
+
 .search-bar {
   width: 100%;
   padding: 15px 20px;
@@ -41,13 +41,13 @@ body {
   outline: none;
 }
 
-/* Container de Músicas */
+
 .music-container {
   display: grid;
   gap: 15px;
 }
 
-/* Item de Música */
+
 .music-item {
   display: flex;
   align-items: center;
@@ -72,6 +72,7 @@ body {
   flex-shrink: 0;
 }
 
+
 .music-info {
   flex: 1;
 }
@@ -92,101 +93,115 @@ body {
   color: #666;
 }
 
-/* Footer Fixo */
+
 .footer {
   position: fixed;
   bottom: 0;
   left: 0;
   right: 0;
   background: var(--primary-color);
-  padding: 15px 0;
+  padding: 6px 0; /* Reduzindo o padding */
   z-index: 1000;
-  box-shadow: 0 -2px 15px rgba(0,0,0,0.1);
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
+  min-height: 40px; /* Diminuindo a altura mínima */
+  display: flex;
+  align-items: center;
 }
+
 
 .contact-links {
   display: flex;
   flex-wrap: wrap;
-  gap: 15px;
+  gap: 10px; 
   justify-content: center;
-  max-width: 800px;
+  max-width: 100%;
+  padding: 0 15px;
   margin: 0 auto;
-  padding: 0 20px;
 }
 
 .contact-link {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
-  padding: 12px 25px;
+  gap: 8px;
+  padding: 8px 15px;
   background: rgba(255,255,255,0.1);
-  border-radius: 30px;
+  border-radius: 20px;
   color: white;
   text-decoration: none;
-  transition: all 0.3s ease;
-  backdrop-filter: blur(5px);
-}
-
-.contact-link:hover {
-  background: rgba(255,255,255,0.2);
-  transform: translateY(-2px);
+  transition: all 0.2s ease;
+  font-size: 0.9rem; 
+  backdrop-filter: blur(3px);
 }
 
 .contact-link i {
-  font-size: 1.2em;
+  font-size: 1rem; 
 }
 
-/* Responsividade */
+
 @media (max-width: 768px) {
   .container {
-    padding: 15px;
-    padding-bottom: 160px;
+    padding-bottom: 120px; 
   }
 
-  .music-item {
-    gap: 15px;
-    padding: 12px;
+  .footer {
+    min-height: 50px;
+    padding: 8px 0;
   }
 
-  .music-cover {
-    width: 70px;
-    height: 70px;
-  }
-
-  .music-info h3 {
-    font-size: 1.1rem;
-  }
-
-  .music-info p {
-    font-size: 0.9rem;
+  .contact-link {
+    padding: 6px 12px;
+    font-size: 0.85rem;
   }
 }
 
 @media (max-width: 480px) {
-  .music-item {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 12px;
-  }
-
-  .music-cover {
-    width: 100%;
-    height: 150px;
-    border-radius: 8px;
-  }
-
-  .contact-links {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .contact-link {
-    width: 100%;
-    justify-content: center;
-    padding: 15px;
+  .container {
+    padding-bottom: 140px; 
   }
 
   .footer {
+    min-height: AUTO;
     padding: 10px 0;
   }
+
+  .contact-links {
+    gap: 8px;
+    flex-direction: row; 
+    flex-wrap: nowrap;
+    overflow-x: auto; 
+    justify-content: flex-start;
+    padding: 0 10px;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .contact-link {
+    flex-shrink: 0; 
+    padding: 8px 12px;
+    font-size: 0.8rem;
+  }
+
+ 
+  .contact-links::-webkit-scrollbar {
+    display: none;
+  }
 }
+
+@media (max-width: 380px) {
+  .contact-links {
+    flex-direction: column; 
+    gap: 6px;
+  }
+  
+  .contact-link {
+    width: 100%;
+    justify-content: center;
+  }
+}
+.logo-fixed {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  height: 40px; /* Ajuste o tamanho conforme necessário */
+  z-index: 1000;
+}
+

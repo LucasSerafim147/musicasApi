@@ -14,21 +14,21 @@ const musics = [
     title: 'Bohemian Rhapsody', 
     artist: 'Queen', 
     duration: '5:55',
-    cover: '/imgs/BohemiaRhaspody.jpg'  
+    cover: '/imgs/public/imgs/BohemiaRhaspody.jpg'  
   },
   { 
     id: 2, 
     title: 'Imagine', 
     artist: 'John Lennon', 
     duration: '3:03',
-    cover: '/imgs/Imagine.jpg'
+    cover: 'public/imgs/Imagine.jpg'
   },
   { 
     id: 3, 
     title: 'Hey Jude', 
     artist: 'The Beatles', 
     duration: '7:11',
-    cover: '/imgs/HeyJude.jpg'
+    cover: 'public/imgs/HeyJude.jpg'
   }
 ];
 
